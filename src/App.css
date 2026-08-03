@@ -573,6 +573,9 @@ button:disabled{
 
 /* Mobile */
 @media (max-width: 500px) {
+     .app > h1 {
+        color: #000;
+    }
     .app {
         padding: 15px 10px;
     }
@@ -619,6 +622,25 @@ button:disabled{
     }
     .detail-item strong {
         font-size: 16px;
+    }
+    .active-unit:hover {
+        background: #ffffff;
+        color: #2563eb;
+    }
+    .unit-toggle {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+    }
+    .unit-toggle button {
+        transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    }
+    .unit-toggle button:hover {
+        transform: translateY(-2px);
+    }
+    .unit-toggle .active-unit:hover {
+        background: #ffffff;
+        color: #2563eb;
     }
 }
 
