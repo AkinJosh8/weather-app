@@ -6,6 +6,18 @@ function WeatherDetails( {weather, unit}) {
     
     return (
         <div className="details">
+          <div className="detail-item">
+              <WiSunrise size={50} /> 
+                <div>
+                  <span>Sunrise</span> <strong>{formatTime(weather.sys.sunrise)}</strong>
+                </div>
+            </div>
+            <div className="detail-item">
+              <WiSunset size={50} /> 
+                <div>
+                  <span>Sunset</span> <strong>{formatTime(weather.sys.sunset)}</strong>
+                </div>
+            </div>
             <div className="detail-item">
               <WiHumidity size={50} />
                 <div>
@@ -17,18 +29,6 @@ function WeatherDetails( {weather, unit}) {
               <WiStrongWind size={50} /> 
                 <div>
                   <span>Wind Speed</span> <strong>{convertWindSpeed(weather.wind.speed, unit)} {unit === "C" ? "m/s" : "mph"}</strong>
-                </div>
-            </div>
-            <div className="detail-item">
-              <WiThermometer size={50} />  
-                <div>
-                  <span>Min Temperature</span> <strong>{convertTemperature(weather.main.temp_min, unit)} {'\u00b0'}{unit}</strong>
-                </div>
-            </div>
-            <div className="detail-item">
-              <WiHot size={50} /> 
-                <div>
-                  <span>Max Temperature</span> <strong>{convertTemperature(weather.main.temp_max, unit)} {'\u00b0'}{unit}</strong>
                 </div>
             </div>
             <div className="detail-item">
@@ -44,15 +44,15 @@ function WeatherDetails( {weather, unit}) {
                 </div>
             </div>
             <div className="detail-item">
-              <WiSunrise size={50} /> 
+              <WiThermometer size={50} />  
                 <div>
-                  <span>Sunrise</span> <strong>{formatTime(weather.sys.sunrise)}</strong>
+                  <span>Min Temperature</span> <strong>{convertTemperature(weather.main.temp_min, unit)} {'\u00b0'}{unit}</strong>
                 </div>
             </div>
             <div className="detail-item">
-              <WiSunset size={50} /> 
+              <WiHot size={50} /> 
                 <div>
-                  <span>Sunset</span> <strong>{formatTime(weather.sys.sunset)}</strong>
+                  <span>Max Temperature</span> <strong>{convertTemperature(weather.main.temp_max, unit)} {'\u00b0'}{unit}</strong>
                 </div>
             </div>
         </div>

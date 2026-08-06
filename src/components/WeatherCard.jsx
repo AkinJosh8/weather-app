@@ -56,11 +56,11 @@ function WeatherCard( {weather, unit} ) {
             <Typewriter 
               words={[getRecommendation()]} 
               loop={false} 
-              cursor={true} 
+              cursor={false} 
               cursorStyle="|" 
               typeSpeed={35} 
-              deleteSpeed={0} 
-              delay={999999} 
+              deleteSpeed={20} 
+              delaySpeed={8000} 
             />
           </p>
           <WeatherDetails
