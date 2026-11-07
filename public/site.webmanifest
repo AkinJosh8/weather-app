@@ -1,0 +1,17 @@
+{
+  "name": "Weather App",
+  "short_name": "Weather",
+  "description": "Live weather updates and forecasts in a modern dashboard.",
+  "start_url": "https://akj-weather.netlify.app/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "icons": [
+    {
+      "src": "/og-image.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
